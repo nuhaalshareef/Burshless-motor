@@ -36,6 +36,8 @@ Here's the circuit diagram for this example.  In addition to the ESC we will jus
 
 ![unnamed (7)](https://user-images.githubusercontent.com/108008564/184463657-3b5aaf34-4341-4d04-a747-765654467e65.jpg)
 
+The Arduino code is really simple with just few lines of code check the code [here](https://github.com/nuhaalshareef/Burshless-motor/blob/main/Motor_control.ino)
+
 Description: So, we need to define the Servo library, because with the servo library we can easily generate the 50Hz PWM signal, otherwise the PWM signals that the Arduino generates are at different frequencies.  Then we need to create a servo object for the ESC control and define a variable for storing the analog input from the potentiometer.  In the setup section, using the attach() function, we define to which Arduino pin is the control signal of the ESC connected and also define the minimum and maximum pulses width of the PWM signal in microseconds.
 
  In the loop section, first we read the potentiometer, map its value from 0 to 1023 into value from 0 to 180. Then using the write() function we send the signal to the ESC, or generate the 50Hz PWM signal.  The values ​​from 0 to 180 correspond to the values ​​from 1000 to 2000 microseconds defined in the setup section.
